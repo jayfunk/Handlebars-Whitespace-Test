@@ -1,0 +1,65 @@
+<script id="expectedEachTemplate" type="text/x-handlebars-template">
+<ul>
+  <li>ele1</li>
+  <li>ele2</li>
+  <li>ele3</li>
+</ul>
+</script>
+
+<script id="eachTemplate" type="text/x-handlebars-template">
+<ul>
+  {{#each collection}}
+  <li>{{this}}</li>
+  {{/each}}
+</ul>
+</script>
+
+<script id="ifTemplate" type="text/x-handlebars-template">
+{{#if booleanValue}}
+<div id="booleanDiv">
+Some Content
+</div>
+{{/if}}
+</script>
+
+<script id="expectedIfTemplate" type="text/x-handlebars-template">
+<div id="booleanDiv">
+Some Content
+</div>
+</script>
+
+<script id="ifElseTemplate" type="text/x-handlebars-template">
+{{#if booleanValue}}
+<div id="trueBooleanDiv">
+True Boolean Content
+</div>
+{{else}}
+<div id="falseBooleanDiv">
+False Boolean Content
+</div>
+{{/if}}
+</script>
+
+<script id="expectedTrueIfTemplate" type="text/x-handlebars-template">
+<div id="trueBooleanDiv">
+True Boolean Content
+</div>
+</script>
+
+<script id="expectedFalseIfTemplate" type="text/x-handlebars-template">
+<div id="falseBooleanDiv">
+False Boolean Content
+</div>
+</script>
+
+<script id="onlyEachTemplate" type="text/x-handlebars-template">
+{{#each collection}}
+<div>{{this}}</div>
+{{/each}}
+</script>
+
+<script id="expectedOnlyEachTemplate" type="text/x-handlebars-template">
+<div>ele1</div>
+<div>ele2</div>
+<div>ele</div>
+</script>
